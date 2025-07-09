@@ -91,3 +91,8 @@ ORDER BY avg_discount DESC
 LIMIT 5;
 
 📸 Screenshots / Demos
+## 📸 Zepto Dashboard – Power BI Visualization
+
+Here’s a preview of the dashboard built to analyze Zepto’s inventory data.
+
+![Zepto Dashboard](Zepto Dashboard.png)
