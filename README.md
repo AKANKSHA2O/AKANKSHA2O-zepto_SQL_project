@@ -94,6 +94,6 @@ LIMIT 5;
 <h2 align="center">📊 Zepto Dashboard – Power BI Visualization</h2>
 
 <p align="center">
-  <img src="zepto_dashboard.png" width="1000">
+  <img src="Zepto_Dashboard.png" width="1000">
 </p>
 
