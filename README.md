@@ -1,94 +1,94 @@
-🛒 Zepto Inventory Analytics Dashboard
+# 🛒 Zepto Inventory Analytics Dashboard
 
-A powerful SQL-driven e-commerce data analysis project simulating real-world inventory insights for Zepto — one of India’s fastest-growing quick-commerce startups. This project uncovers pricing inefficiencies, stock insights, and discount-driven opportunities through SQL querying and structured data storytelling.
+A powerful SQL-driven e-commerce data analysis project simulating real-world inventory insights for **Zepto** — one of India’s fastest-growing quick-commerce startups. This project uncovers **pricing inefficiencies**, **stock insights**, and **discount-driven opportunities** using SQL queries and structured data storytelling.
 
-✨ Short Description / Purpose
+---
 
-The Zepto Inventory Analytics project is a comprehensive SQL-based analysis created to explore patterns in pricing, availability, discounts, and product categorization across Zepto’s live inventory. This project helps aspiring data analysts simulate real-life problem-solving in the retail/e-commerce domain.
+## ✨ Project Purpose
 
-⚙️ Tech Stack
+The **Zepto Inventory Analytics Project** is a comprehensive **SQL-based case study** that simulates real-world e-commerce problem solving. The goal is to explore patterns in:
 
-The project was built using the following tools and technologies:
+- Product pricing and discounts
+- Inventory availability
+- Category-level performance
+- Revenue optimization
 
-🗃️ PostgreSQL – Database used to host and query the dataset
+Ideal for aspiring data analysts seeking hands-on experience with business-focused data exploration.
 
-🖥️ pgAdmin – GUI for database management and import
+---
 
-📈 SQL (Structured Query Language) – Used for all data analysis, aggregation, filtering, and business logic
+## ⚙️ Tech Stack
 
-📄 CSV – Data file format (converted to UTF-8 for import)
+| Purpose               | Tools Used                        |
+|-----------------------|------------------------------------|
+| Database              | 🗃️ PostgreSQL                     |
+| GUI / Data Import     | 🖥️ pgAdmin                        |
+| Query Language        | 📈 SQL (Structured Query Language) |
+| Dataset Format        | 📄 CSV (UTF-8 Encoded)             |
+| (Optional) Visualization | 📊 Power BI / Excel             |
 
-📊 (Optional) Power BI / Excel – Can be used for visualizing final output (not required)
+---
 
-🗂️ Data Source
+## 📂 Data Source
 
-Source: Dataset scraped from Zepto and hosted on Kaggle – Zepto Inventory Dataset
+- **Dataset**: Zepto Inventory Dataset (scraped from Zepto)
+- **Hosted On**: Kaggle
+- **Size**: ~20,000+ rows
+- **Format**: CSV
 
-Format: ~20,000+ rows of product listings, each representing a unique SKU (Stock Keeping Unit)
+### 📌 Columns in the Dataset:
+- `sku_id` – Unique Product ID  
+- `name` – Product Name  
+- `category` – Product Category (e.g., Fruits, Dairy, Snacks)  
+- `mrp`, `discountPercent`, `discountedSellingPrice` – Pricing Fields  
+- `availableQuantity`, `outOfStock` – Stock Information  
+- `weightInGms`, `quantity` – Product Size Metrics  
 
-Columns Include:
+---
 
-sku_id – Unique product ID
+## 🔍 Project Highlights
 
-name – Product title
+### 🧩 Business Problem
+Zepto’s listings have inconsistencies: duplicate SKUs, invalid prices, stock-out confusion. Business users need **data visibility** to make better decisions.
 
-category – Product group (e.g., Fruits, Dairy, Snacks)
+---
 
-mrp, discountPercent, discountedSellingPrice – Price columns in ₹
+### 🎯 Project Objectives
+Use SQL to:
+- Clean and standardize raw inventory data  
+- Discover patterns in stock health, pricing, and discounting  
+- Identify high-opportunity product categories  
+- Simulate a **real-world e-commerce analysis workflow**
 
-availableQuantity, outOfStock – Inventory levels
+---
 
-weightInGms, quantity – Product size/packaging indicators
+## 🧠 Key Insights and Queries
 
-🔍 Features / Highlights
+### 📦 Inventory Health
+- Segmented stock into **In-stock vs Out-of-stock**
+- Grouped weights into **Low / Medium / Bulk**
 
-• Business Problem
-Zepto’s product listings are messy and inconsistent, with multiple SKUs for similar products, invalid price entries, and inconsistent availability statuses. Business users lack visibility into where pricing inefficiencies, stock-outs, or high-revenue categories lie.
+### 💰 Pricing Insights
+- Converted pricing from paise to ₹  
+- Calculated **price per gram** to identify value products  
+- Flagged overpriced SKUs (e.g., MRP > ₹500, no discount)
 
-• Goal of the Project
+### 🛍️ Discount & Revenue Analysis
+- Top 10 products by **discount %**
+- Categories with **highest average discount**
+- Estimated **revenue potential** per category
 
-To simulate how an e-commerce analyst uses SQL to:
+---
 
-Clean and standardize data
+### 📌 Sample Query: Top Discounted Categories
 
-Discover trends in pricing, discounting, and stock levels
-
-Identify business opportunities and performance gaps across product categories
-
-• Walkthrough of Key Insights & Queries
-
-📦 Inventory Health
-
-Compared in-stock vs out-of-stock items to determine category reliability
-
-Grouped product weights into Low, Medium, Bulk for segmentation
-
-💰 Pricing Analysis
-
-Converted prices from paise to rupees for consistency
-
-Calculated price per gram to identify best value-for-money products
-
-Filtered expensive products (MRP > ₹500) with little or no discount
-
-🛍️ Discount & Revenue Metrics
-
-Ranked top 10 products by discount percent
-
-Estimated potential revenue by product category
-
-Found categories with highest average discounts (for pricing strategy)
-
-📊 Sample Query – Top Discounted Categories
-
-sql
-Copy
-Edit
+```sql
 SELECT category, ROUND(AVG(discountPercent), 2) AS avg_discount
 FROM zepto
 GROUP BY category
 ORDER BY avg_discount DESC
 LIMIT 5;
+
 
 📸 Screenshots / Demos
 <h2 align="center">📊 Zepto Dashboard – Power BI Visualization</h2>
